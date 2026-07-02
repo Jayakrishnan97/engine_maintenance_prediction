@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+
+# VS Code
+.vscode/
+
+# Airflow logs
+airflow/logs/
+
+# Spark
+spark-warehouse/
+metastore_db/
+
+# Generated CSVs (optional)
+generated_csv/
+
+# OS
+.DS_Store
+Thumbs.db

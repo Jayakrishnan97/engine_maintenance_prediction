@@ -1,0 +1,13 @@
+# Airline Engine Maintenance Data Platform
+
+A production-inspired Data Engineering project that simulates the lifecycle of CFM56-7B aircraft engines.
+
+## Current Progress
+
+- ✅ Engine Dimension
+- ✅ Aircraft Dimension
+- 🚧 Engine Installation History
+
+## Planned Architecture
+
+Python → CSV → Airflow → PostgreSQL → Kafka → Spark → Iceberg → dbt → Grafana
