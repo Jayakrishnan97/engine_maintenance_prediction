@@ -22,3 +22,6 @@ generated_csv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated datasets
+data_source/dynamic_datasource/*.csv

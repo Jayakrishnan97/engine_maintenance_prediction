@@ -1,0 +1,38 @@
+,airport_code,airport_name,city,state,country,airport_type,runway_length_ft,elevation_ft
+0,DEL,Indira Gandhi International Airport,New Delhi,Delhi,India,INTERNATIONAL,14534,777
+1,BOM,Chhatrapati Shivaji Maharaj International Airport,Mumbai,Maharashtra,India,INTERNATIONAL,11499,39
+2,BLR,Kempegowda International Airport,Bengaluru,Karnataka,India,INTERNATIONAL,13123,3000
+3,HYD,Rajiv Gandhi International Airport,Hyderabad,Telangana,India,INTERNATIONAL,13976,2024
+4,MAA,Chennai International Airport,Chennai,Tamil Nadu,India,INTERNATIONAL,12467,52
+5,CCU,Netaji Subhas Chandra Bose International Airport,Kolkata,West Bengal,India,INTERNATIONAL,11900,16
+6,COK,Cochin International Airport,Kochi,Kerala,India,INTERNATIONAL,11155,30
+7,GOI,Dabolim Airport,Goa,Goa,India,DOMESTIC,11345,150
+8,GOX,Manohar International Airport,Goa,Goa,India,INTERNATIONAL,12300,187
+9,AMD,Sardar Vallabhbhai Patel International Airport,Ahmedabad,Gujarat,India,INTERNATIONAL,11781,189
+10,PNQ,Pune Airport,Pune,Maharashtra,India,DOMESTIC,8330,1942
+11,LKO,Chaudhary Charan Singh International Airport,Lucknow,Uttar Pradesh,India,DOMESTIC,9000,404
+12,TRV,Trivandrum International Airport,Thiruvananthapuram,Kerala,India,INTERNATIONAL,11178,14
+13,IXC,Chandigarh International Airport,Chandigarh,Chandigarh,India,DOMESTIC,10000,1012
+14,IXM,Madurai Airport,Madurai,Tamil Nadu,India,DOMESTIC,7500,459
+15,VGA,Vijayawada International Airport,Vijayawada,Andhra Pradesh,India,DOMESTIC,11155,82
+16,VTZ,Visakhapatnam International Airport,Visakhapatnam,Andhra Pradesh,India,INTERNATIONAL,10007,16
+17,NAG,Dr. Babasaheb Ambedkar International Airport,Nagpur,Maharashtra,India,INTERNATIONAL,10502,1033
+18,IDR,Devi Ahilyabai Holkar Airport,Indore,Madhya Pradesh,India,DOMESTIC,9000,1850
+19,BBI,Biju Patnaik International Airport,Bhubaneswar,Odisha,India,INTERNATIONAL,9000,138
+20,PAT,Jay Prakash Narayan Airport,Patna,Bihar,India,DOMESTIC,6800,170
+21,JAI,Jaipur International Airport,Jaipur,Rajasthan,India,INTERNATIONAL,11178,1263
+22,SXR,Sheikh ul-Alam International Airport,Srinagar,Jammu and Kashmir,India,DOMESTIC,12100,5429
+23,GAU,Lokpriya Gopinath Bordoloi International Airport,Guwahati,Assam,India,INTERNATIONAL,10200,162
+24,IXZ,Veer Savarkar International Airport,Port Blair,Andaman and Nicobar Islands,India,DOMESTIC,10800,14
+0,DXB,Dubai International Airport,Dubai,Dubai,United Arab Emirates,INTERNATIONAL,14764,62
+1,AUH,Zayed International Airport,Abu Dhabi,Abu Dhabi,United Arab Emirates,INTERNATIONAL,13451,88
+2,DOH,Hamad International Airport,Doha,Doha,Qatar,INTERNATIONAL,15912,13
+3,MCT,Muscat International Airport,Muscat,Muscat,Oman,INTERNATIONAL,13123,49
+4,SIN,Singapore Changi Airport,Singapore,Singapore,Singapore,INTERNATIONAL,13123,22
+5,KUL,Kuala Lumpur International Airport,Kuala Lumpur,Selangor,Malaysia,INTERNATIONAL,13648,69
+6,BKK,Suvarnabhumi Airport,Bangkok,Bangkok,Thailand,INTERNATIONAL,13123,5
+7,CMB,Bandaranaike International Airport,Colombo,Western Province,Sri Lanka,INTERNATIONAL,10991,30
+8,KTM,Tribhuvan International Airport,Kathmandu,Bagmati,Nepal,INTERNATIONAL,10007,4390
+9,DAC,Hazrat Shahjalal International Airport,Dhaka,Dhaka,Bangladesh,INTERNATIONAL,10500,27
+10,MLE,Velana International Airport,Malé,Kaafu Atoll,Maldives,INTERNATIONAL,11155,6
+11,CGP,Shah Amanat International Airport,Chattogram,Chattogram,Bangladesh,INTERNATIONAL,9650,12
