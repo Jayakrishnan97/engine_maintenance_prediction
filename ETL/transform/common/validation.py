@@ -59,5 +59,5 @@ def validate_date_order(df:pd.DataFrame, start_date:str, end_date: str) -> None:
     
     invalid = df[df[end_date] < df[start_date]]
 
-    if not invalid.empty():
+    if not invalid.empty:
         raise ValueError(f"{end_date} cannot be earlier than {start_date}")

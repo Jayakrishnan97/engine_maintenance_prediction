@@ -16,3 +16,10 @@ LIFE_UNITS = [
     "FC",
     "MO"
 ]
+
+FLIGHT_STATUS = [
+    "ON_TIME",
+    "DELAYED",
+    "CANCELLED",
+    "COMPLETED"
+]
