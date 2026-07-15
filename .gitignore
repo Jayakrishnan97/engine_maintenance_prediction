@@ -27,3 +27,4 @@ Thumbs.db
 data_source/dynamic_datasource/*.csv
 
 .env
+.env*.local
