@@ -25,3 +25,5 @@ Thumbs.db
 
 # Generated datasets
 data_source/dynamic_datasource/*.csv
+
+.env
