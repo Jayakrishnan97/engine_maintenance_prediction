@@ -1,6 +1,13 @@
 import pandas as pd
 
 
+#validate_required_columns
+#validate_unique_key
+#validate_positive
+#validate_notnull
+#validate_allowed_values
+#validate_date_order
+
 def validate_required_columns(df:pd.DataFrame, required_columns: list) -> None:
 
     missing = [col for col in required_columns if col not in df.columns]

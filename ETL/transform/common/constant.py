@@ -1,7 +1,9 @@
 ENGINE_STATUS = [
     "ACTIVE",
     "REMOVED",
-    "OVERHAULED"
+    "OVERHAULED",
+    "SHOP_VISIT",
+    "INSTALLED"
 ]
 
 WORK_ORDER_STATUS = [

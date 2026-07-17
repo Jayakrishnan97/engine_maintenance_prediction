@@ -3,6 +3,12 @@ import pandas as pd
 
 # ==========================================================
 # COMMON HELPERS
+
+#standardize_columns
+#remove_duplicates
+#strip_strings
+#uppercase_columns
+
 # ==========================================================
 
 def standardize_columns(df:pd.DataFrame) -> pd.DataFrame:
