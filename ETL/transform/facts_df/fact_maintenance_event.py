@@ -19,8 +19,7 @@ from ETL.transform.common.validation import (
     validate_unique_key,
     validate_positive,
     validate_notnull,
-    validate_allowed_values,
-    validate_date_order
+    validate_allowed_values
 )
 
 from ETL.transform.common.constant import (
@@ -53,15 +52,15 @@ def transform_fact_maintenance_event(df:pd.DataFrame) -> pd.DataFrame:
                            ])
 
     #date and numeric
-    df = to_datetime(df, "maintenance_date")
+    df = to_datetime(df, ["maintenance_date"])
 
-    df = to_numeric(df, "labor_hours")
+    df = to_numeric(df, ["labor_hours"])
 
     #validation
 
     validate_unique_key(df, "maintenance_event_id")
 
-    validate_positive(df, "labor_hours")
+    validate_positive(df, ["labor_hours"])
 
     validate_notnull(df,
                      [
@@ -79,7 +78,6 @@ def transform_fact_maintenance_event(df:pd.DataFrame) -> pd.DataFrame:
                                 "work_order_id",
                                 "fault_id",
                                 "engine_serial_number",
-                                "aircraft_registration",
                                 "aircraft_registration",
                                 "maintenance_date"   
                               ])
