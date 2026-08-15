@@ -122,3 +122,21 @@ REMOVAL_TYPE = ['UNSCHEDULED', 'PLANNED']
 REMOVAL_STATUS = ['COMPLETED']
 
 
+
+ACTION_TAKEN = ['CLEANED',
+                'OPERATIONAL CHECK',
+                'REPAIRED',
+                'ADJUSTED',
+                'VISUAL INSPECTION',
+                'OVERHAULED',
+                'COMPONENT REPLACED',
+                'BORESCOPE INSPECTION']
+
+PARTS_REPLACED = ['NO', 'YES']
+
+MAINTENANCE_RESULT = ['SERVICEABLE', 'DEFERRED', 'SCRAPPED']
+
+RELEASE_TO_SERVICE = ['YES', 'NO']
+
+
+
