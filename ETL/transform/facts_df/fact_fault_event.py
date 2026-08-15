@@ -132,9 +132,9 @@ def transform_fact_fault_event(df:pd.DataFrame)->pd.DataFrame:
 
     return df
 
+if __name__ == "__main__":
+    fact_fault_event_etl_df = transform_fact_fault_event(fact_fault_event_df)
 
-fact_fault_event_etl_df = transform_fact_fault_event(fact_fault_event_df)
+    print(f'rows: {len(fact_fault_event_etl_df)}')
 
-print(f'rows: {len(fact_fault_event_etl_df)}')
-
-print(f'columns: {len(fact_fault_event_etl_df.columns)}')
+    print(f'columns: {len(fact_fault_event_etl_df.columns)}')

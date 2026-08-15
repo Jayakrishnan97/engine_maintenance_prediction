@@ -4,9 +4,9 @@ import pandas as pd
 # ==========================================================
 # COMMON HELPERS
 
-#standardize_columns
-#remove_duplicates
-#strip_strings
+#standardize_columns,
+#remove_duplicates,
+#strip_strings,
 #uppercase_columns
 
 # ==========================================================

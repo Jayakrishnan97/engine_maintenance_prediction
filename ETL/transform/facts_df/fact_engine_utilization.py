@@ -96,9 +96,10 @@ def transform_engine_utilization(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-fact_engine_utilization_ETL_df = transform_engine_utilization(fact_engine_utilization_df)
+if __name__ == "__main__":
+    fact_engine_utilization_ETL_df = transform_engine_utilization(fact_engine_utilization_df)
 
-print(fact_engine_utilization_ETL_df.dtypes)
+    print(fact_engine_utilization_ETL_df.dtypes)
 
-print(fact_engine_utilization_ETL_df.head())
+    print(fact_engine_utilization_ETL_df.head())
 

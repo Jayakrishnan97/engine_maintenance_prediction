@@ -153,23 +153,23 @@ def transform_fact_shop_visit(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+if __name__ == "__main__":
+
+    transform_fact_shop_df = transform_fact_shop_visit(fact_shop_visit_df)
 
 
-transform_fact_shop_df = transform_fact_shop_visit(fact_shop_visit_df)
+    print("="*60)
+    print("fact_shop_visit_transform_completed")
+    print("="*60)
 
 
-print("="*60)
-print("fact_shop_visit_transform_completed")
-print("="*60)
+    print(f"rows: {len(transform_fact_shop_df)}")
+    print(f"cols: {len(transform_fact_shop_df.columns)}")
 
 
-print(f"rows: {len(transform_fact_shop_df)}")
-print(f"cols: {len(transform_fact_shop_df.columns)}")
+    print("\nDatatypes")
+    print(f"{transform_fact_shop_df.dtypes}")
 
 
-print("\nDatatypes")
-print(f"{transform_fact_shop_df.dtypes}")
-
-
-print("\nFirst Five Records:")
-print(transform_fact_shop_df.head())
+    print("\nFirst Five Records:")
+    print(transform_fact_shop_df.head())

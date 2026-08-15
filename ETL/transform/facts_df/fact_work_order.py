@@ -155,19 +155,19 @@ def transform_fact_workorder(df:pd.DataFrame) -> pd.DataFrame:
     
     return df
 
+if __name__ == "__main__":
+    transform_fact_workorder_df = transform_fact_workorder(fact_work_order_df)
 
-transform_fact_workorder_df = transform_fact_workorder(fact_work_order_df)
+    print("="*60)
+    print("work_order_transform_completed")
+    print("="*60)
 
-print("="*60)
-print("work_order_transform_completed")
-print("="*60)
+    print(f"rows: {len(transform_fact_workorder_df)}")
+    print(f"cols: {len(transform_fact_workorder_df.columns)}")
 
-print(f"rows: {len(transform_fact_workorder_df)}")
-print(f"cols: {len(transform_fact_workorder_df.columns)}")
+    print("\nData Types:")
+    print(f"{transform_fact_workorder_df.dtypes}")
 
-print("\nData Types:")
-print(f"{transform_fact_workorder_df.dtypes}")
-
-print("\nFirst Five Records:")
-print(transform_fact_workorder_df.head())
+    print("\nFirst Five Records:")
+    print(transform_fact_workorder_df.head())
 
