@@ -166,7 +166,7 @@ print(f"rows: {len(transform_fact_workorder_df)}")
 print(f"cols: {len(transform_fact_workorder_df.columns)}")
 
 print("\nData Types:")
-print(f"datatypes: {transform_fact_workorder_df.dtypes}")
+print(f"{transform_fact_workorder_df.dtypes}")
 
 print("\nFirst Five Records:")
 print(transform_fact_workorder_df.head())
