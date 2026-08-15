@@ -67,3 +67,24 @@ FAULT_STATUS = [
     "DEFERRED",
     'CLOSED'
 ]
+
+MAINTENANCE_TYPE = [
+    'REPAIR', 
+    'INSPECTION', 
+    'OVERHAUL', 
+    'REPLACEMENT'
+    ]
+
+PRIORITY = [
+    'LOW', 
+    'HIGH', 
+    'MEDIUM', 
+    'AOG'
+    ]
+
+ASSIGNED_TEAM = [
+    'POWERPLANT', 
+    'COMPONENT SHOP', 
+    'LINE MAINTENANCE'
+    ]
+
