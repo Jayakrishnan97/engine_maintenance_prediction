@@ -25,3 +25,45 @@ FLIGHT_STATUS = [
     "CANCELLED",
     "COMPLETED"
 ]
+
+FAULT_CATEGORY = [
+    "ENGINE",
+    "COMPONENT",
+    "AIRFRAME",
+    "ELECTRICAL",
+    "HYDRAULIC",
+    'FUEL',
+    'IGNITION',
+    'COMPRESSOR',
+    'TURBINE',
+    'SENSOR',
+    'TEMPERATURE',
+    'OIL',
+    'VIBRATION'
+]
+
+SEVERITY = [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+]
+
+DETECTION_SOURCE = [
+    "PILOT",
+    "MAINTENANCE",
+    "SENSOR",
+    'BITE',
+    'PILOT REPORT',
+    'EICAS',
+    'MAINTENANCE INSPECTION',
+    'OIL ANALYSIS'
+]
+
+FAULT_STATUS = [
+    "OPEN",
+    "IN_PROGRESS",
+    "RESOLVED",
+    "DEFERRED",
+    'CLOSED'
+]
