@@ -153,9 +153,11 @@ def transform_fact_shop_visit(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+transform_fact_shop_df = transform_fact_shop_visit(fact_shop_visit_df)
+
 if __name__ == "__main__":
 
-    transform_fact_shop_df = transform_fact_shop_visit(fact_shop_visit_df)
+    
 
 
     print("="*60)

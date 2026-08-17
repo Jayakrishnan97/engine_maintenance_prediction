@@ -87,9 +87,10 @@ def transform_engine_component_inventory(df:pd.DataFrame) -> pd.DataFrame:
     
     return df
 
-if __name__ == "__main__":
+transform_engine_component_inventory_df = transform_engine_component_inventory(initial_engine_component_inventory_df)
 
-    transform_engine_component_inventory_df = transform_engine_component_inventory(initial_engine_component_inventory_df)
+
+if __name__ == "__main__":
 
     print("="*60)
     print("transform_engine_component_inventory_completed")

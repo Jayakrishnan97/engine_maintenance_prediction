@@ -155,8 +155,11 @@ def transform_fact_workorder(df:pd.DataFrame) -> pd.DataFrame:
     
     return df
 
+
+transform_fact_workorder_df = transform_fact_workorder(fact_work_order_df)
+
 if __name__ == "__main__":
-    transform_fact_workorder_df = transform_fact_workorder(fact_work_order_df)
+    
 
     print("="*60)
     print("work_order_transform_completed")

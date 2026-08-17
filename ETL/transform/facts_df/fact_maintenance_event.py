@@ -92,10 +92,10 @@ def transform_fact_maintenance_event(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-
+transform_fact_maintenance_event_df = transform_fact_maintenance_event(fact_maintenance_event_df)
 
 if __name__ == "__main__":
-    transform_fact_maintenance_event_df = transform_fact_maintenance_event(fact_maintenance_event_df)
+    
 
     print("="*60)
     print("fact_maintenance_transform_completed")

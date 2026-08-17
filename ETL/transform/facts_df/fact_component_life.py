@@ -90,8 +90,10 @@ def transform_fact_component_life(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+
+transform_fact_component_life_df = transform_fact_component_life(fact_component_life_df)
+
 if __name__ == "__main__":
-    transform_fact_component_life_df = transform_fact_component_life(fact_component_life_df)
 
 
     print("="*60)

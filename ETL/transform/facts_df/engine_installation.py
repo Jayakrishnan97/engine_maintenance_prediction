@@ -65,8 +65,10 @@ def transform_engine_installation(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+
+transform_engine_installation_df = transform_engine_installation(initial_engine_installation_df)
+
 if __name__ == "__main__":
-    transform_engine_installation_df = transform_engine_installation(initial_engine_installation_df)
 
     print("="*60)
     print("transform_engine_installation_completed")

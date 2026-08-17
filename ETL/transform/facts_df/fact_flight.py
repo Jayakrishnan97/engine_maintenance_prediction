@@ -112,11 +112,14 @@ def transform_fact_flight(df:pd.DataFrame) -> pd.DataFrame:
     
     return df
 
+
+transform_fact_flight_df = transform_fact_flight(fact_flight_df)
+
 if __name__ == "__main__":
-    fact_flight_etl_df = transform_fact_flight(fact_flight_df)
+    
 
 
-    print(fact_flight_etl_df.dtypes)
+    print(transform_fact_flight_df.dtypes)
 
-    print(fact_flight_etl_df.head())
+    print(transform_fact_flight_df.head())
 

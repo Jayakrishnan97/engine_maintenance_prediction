@@ -8,6 +8,8 @@ from ETL.extract.extract import (
     dim_engine_component_df,
 )
 
+from ETL.transform.common.datatype import to_datetime
+
 
 def clean_columns(df):
     df.columns = (
@@ -24,6 +26,11 @@ def transform_aircraft(df):
     df = clean_columns(df.copy())
 
     df.drop_duplicates(inplace=True)
+
+    df = to_datetime(
+    df,
+    ["aircraft_manufacture_date"]
+)
 
     df["aircraft_registration"] = (
         df["aircraft_registration"]
@@ -46,9 +53,8 @@ def transform_engine(df):
         .str.strip()
     )
 
-    df["engine_manufacture_date"] = pd.to_datetime(
-        df["engine_manufacture_date"],
-        errors="coerce"
+    to_datetime(
+        df, ["engine_manufacture_date"]
     )
 
     return df
@@ -62,6 +68,8 @@ def transform_airport(df):
 
     df["airport_code"] = df["airport_code"].str.upper()
 
+    df.drop(columns=["unnamed:_0"], errors="ignore", inplace=True)
+
     return df
 
 
@@ -70,6 +78,8 @@ def transform_route(df):
     df = clean_columns(df.copy())
 
     df.drop_duplicates(inplace=True)
+
+    df.drop(columns=["unnamed:_0"], errors="ignore", inplace=True)
 
     return df
 
@@ -91,21 +101,25 @@ def transform_component(df):
         errors="coerce"
     )
 
+    df.drop(columns=["unnamed:_0"], errors="ignore", inplace=True)
+
     return df
 
 
 # =====================================================
 
+
+
+dim_aircraft = transform_aircraft(dim_aircraft_df)
+
+dim_engine = transform_engine(dim_engine_df)
+
+dim_airport = transform_airport(dim_airport_df)
+
+dim_route = transform_route(dim_routes_df)
+
+dim_component = transform_component(dim_engine_component_df)
+
 if __name__ == "__main__":
-
-    dim_aircraft = transform_aircraft(dim_aircraft_df)
-
-    dim_engine = transform_engine(dim_engine_df)
-
-    dim_airport = transform_airport(dim_airport_df)
-
-    dim_route = transform_route(dim_routes_df)
-
-    dim_component = transform_component(dim_engine_component_df)
 
     print("Dimension Transformation Completed")

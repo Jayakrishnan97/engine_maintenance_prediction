@@ -1,0 +1,179 @@
+#==========================transform_engine_component_inventory_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_engine_component_inventory_df(
+inventory_id VARCHAR(20)
+component_serial_number VARCHAR(20)
+component_id VARCHAR(20)
+component_name VARCHAR(20)
+engine_serial_number VARCHAR(20)
+manufacture_date DATE
+installation_date DATE
+position VARCHAR(20)
+installation_type VARCHAR(20)
+status VARCHAR(20)
+);
+""")
+#==========================transform_fact_engine_removal_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_engine_removal_df(
+removal_id VARCHAR(20)
+maintenance_event_id VARCHAR(20)
+work_order_id VARCHAR(20)
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+removal_date DATE
+removal_reason VARCHAR(20)
+removal_type VARCHAR(20)
+engine_hours_at_removal NUMERIC
+engine_cycles_at_removal INT
+removed_by VARCHAR(20)
+replacement_engine_serial VARCHAR(20)
+removal_status VARCHAR(20)
+);
+""")
+#==========================transform_fact_component_life_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_component_life_df(
+utilization_id VARCHAR(20)
+component_serial_number VARCHAR(20)
+component_id VARCHAR(20)
+engine_serial_number VARCHAR(20)
+utilization_date DATE
+tsn NUMERIC
+tso NUMERIC
+tsr NUMERIC
+life_unit VARCHAR(20)
+life_limit NUMERIC
+status VARCHAR(20)
+);
+""")
+#==========================transform_fact_flight_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_flight_df (
+flight_id INT
+flight_date DATE
+aircraft_registration VARCHAR(20)
+route_id VARCHAR(20)
+origin VARCHAR(20)
+destination VARCHAR(20)
+left_engine_serial_number VARCHAR(20)
+right_engine_serial_number VARCHAR(20)
+scheduled_departure DATE
+actual_departure DATE
+scheduled_arrival DATE
+actual_arrival DATE
+flight_duration_min INT
+block_hours NUMERIC
+air_hours NUMERIC
+flight_cycles INT
+weather VARCHAR(20)
+delay_minutes INT
+flight_status VARCHAR(20)
+);
+""")
+#==========================transform_fact_engine_utilization_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_engine_utilization_df (
+utilization_id VARCHAR(20)
+utilization_date DATE
+flight_id INT
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+flight_hours NUMERIC
+flight_cycles INT
+cumulative_engine_hours NUMERIC
+cumulative_engine_cycles INT
+engine_status VARCHAR(20)
+);
+""")
+#==========================transform_fact_maintenance_event_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_maintenance_event_df (
+maintenance_event_id VARCHAR(20)
+work_order_id VARCHAR(20)
+fault_id VARCHAR(20)
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+component_serial_number VARCHAR(20)
+component_id VARCHAR(20)
+maintenance_date DATE
+maintenance_type VARCHAR(20)
+action_taken VARCHAR(20)
+technician_id VARCHAR(20)
+labor_hours INT
+parts_replaced VARCHAR(20)
+maintenance_result VARCHAR(20)
+release_to_service VARCHAR(20)
+);
+""")
+#==========================transform_fact_workorder_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_workorder_df (
+work_order_id VARCHAR(20)
+fault_id VARCHAR(20)
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+component_serial_number VARCHAR(20)
+component_id VARCHAR(20)
+work_order_date DATE
+maintenance_type VARCHAR(20)
+priority VARCHAR(20)
+assigned_team VARCHAR(20)
+technician_id VARCHAR(20)
+planned_start DATE
+planned_end DATE
+actual_start DATE
+actual_end DATE
+labor_hours INT
+work_order_status VARCHAR(20)
+);
+""")
+#==========================transform_fact_fault_event_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_fault_event_df (
+fault_id VARCHAR(20)
+flight_id INT
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+component_serial_number VARCHAR(20)
+component_id VARCHAR(20)
+fault_date DATE
+fault_code VARCHAR(20)
+fault_description VARCHAR(20)
+fault_category VARCHAR(20)
+severity VARCHAR(20)
+detection_source VARCHAR(20)
+status VARCHAR(20)
+);
+""")
+#==========================transform_fact_shop_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_fact_shop_df (
+shop_visit_id VARCHAR(20)
+maintenance_event_id VARCHAR(20)
+work_order_id VARCHAR(20)
+engine_serial_number VARCHAR(20)
+aircraft_registration VARCHAR(20)
+visit_reason VARCHAR(20)
+shop_name VARCHAR(20)
+arrival_date DATE
+teardown_date DATE
+assembly_date DATE
+completion_date DATE
+days_in_shop INT
+modules_removed INT
+llp_replaced VARCHAR(20)
+test_cell_result VARCHAR(20)
+return_to_service VARCHAR(20)
+);
+""")
+#==========================transform_engine_installation_df==================================
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS transform_engine_installation_df (
+installation_id INT
+aircraft_registration VARCHAR(20)
+engine_serial_number VARCHAR(20)
+engine_position VARCHAR(20)
+);
+""")
+#============================================================

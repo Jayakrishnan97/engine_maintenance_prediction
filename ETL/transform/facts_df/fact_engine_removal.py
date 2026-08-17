@@ -100,8 +100,11 @@ def transform_fact_engine_removal(df:pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+
+
+transform_fact_engine_removal_df = transform_fact_engine_removal(fact_engine_removal_df)
+
 if __name__ == "__main__":
-    transform_fact_engine_removal_df = transform_fact_engine_removal(fact_engine_removal_df)
 
     print("="*60)
     print("engine removal_transform_completed")
