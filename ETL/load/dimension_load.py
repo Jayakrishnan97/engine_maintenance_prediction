@@ -1,7 +1,3 @@
-import os
-
-import psycopg2
-
 import pandas as pd
 
 from ETL.load.connection import get_connection_sql
