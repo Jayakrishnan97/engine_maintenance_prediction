@@ -9,8 +9,8 @@ A production-inspired Data Engineering project that simulates the lifecycle of C
 ✅ ETL Extract Layer Complete
 ✅ ETL Dimension Transformation Complete
 ✅ Fact Table Transformations Complete 
-🚧 PostgreSQL Data Warehouse In Progress
-⏳ Airflow Orchestration
+✅ PostgreSQL Data Warehouse In Progress
+🚧 Airflow Orchestration
 ⏳ Dashboard & Analytics
 
 ## Planned Architecture

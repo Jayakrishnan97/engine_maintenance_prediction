@@ -26,15 +26,21 @@ def load_dimension(df:pd.DataFrame, table_Name: str) -> None:
         connection.dispose()
 
 
-load_dimension(dim_aircraft, "dim_aircraft")
+def main():
 
-load_dimension(dim_airport, "dim_airport")
+    load_dimension(dim_aircraft, "dim_aircraft")
 
-load_dimension(dim_route, "dim_route")
+    load_dimension(dim_airport, "dim_airport")
 
-load_dimension(dim_component, "dim_component")
+    load_dimension(dim_route, "dim_route")
 
-load_dimension(dim_engine, "dim_engine")
+    load_dimension(dim_component, "dim_component")
+
+    load_dimension(dim_engine, "dim_engine")
+
+
+if __name__ == "__main__":
+    main()
 
 
 
