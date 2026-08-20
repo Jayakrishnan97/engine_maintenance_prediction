@@ -28,3 +28,8 @@ data_source/dynamic_datasource/*.csv
 
 .env
 .env*.local
+# Python virtual environment
+airflow_venv/
+
+# Airflow local files
+airflow/
