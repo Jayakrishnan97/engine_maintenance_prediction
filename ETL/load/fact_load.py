@@ -46,29 +46,41 @@ def load_fact_df(df:pd.DataFrame, table_name: str) -> None:
         connection.dispose()
 
 
-def main():
-    load_fact_df(transform_engine_component_inventory_df, "engine_component_inventory")
+def load_all_facts():
+    
+    df = transform_engine_component_inventory_df
+    load_fact_df(df, "engine_component_inventory")
 
-    load_fact_df(transform_engine_installation_df, "engine_installation")
 
-    load_fact_df(transform_fact_component_life_df, "fact_component_life")
+    df = transform_engine_installation_df
+    load_fact_df(df, "engine_installation")
 
-    load_fact_df(transform_fact_engine_removal_df, "fact_engine_removal")
+    df = transform_fact_component_life_df
+    load_fact_df(df, "fact_component_life")
 
-    load_fact_df(transform_fact_engine_utilization_df, "fact_engine_utilization")
+    df = transform_fact_engine_removal_df
+    load_fact_df(df, "fact_engine_removal")
 
-    load_fact_df(transform_fact_fault_event_df, "fact_fault_event")
+    df = transform_fact_engine_utilization_df
+    load_fact_df(df, "fact_engine_utilization")
 
-    load_fact_df(transform_fact_flight_df, "fact_flight")
+    df = transform_fact_fault_event_df
+    load_fact_df(df, "fact_fault_event")
 
-    load_fact_df(transform_fact_maintenance_event_df, "fact_maintenance_event")
+    df = transform_fact_flight_df
+    load_fact_df(df, "fact_flight")
 
-    load_fact_df(transform_fact_shop_df, "fact_shop_visit")
+    df = transform_fact_maintenance_event_df
+    load_fact_df(df, "fact_maintenance_event")
 
-    load_fact_df(transform_fact_workorder_df, "fact_workorder")
+    df = transform_fact_shop_df
+    load_fact_df(df, "fact_shop_visit")
+
+    df = transform_fact_workorder_df
+    load_fact_df(df, "fact_workorder")
 
 
 if __name__ == "__main__":
-    main()
+    load_all_facts()
 
 

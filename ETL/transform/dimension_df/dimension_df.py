@@ -109,17 +109,26 @@ def transform_component(df):
 # =====================================================
 
 
+def transform_all_dimension(dim_aircraft_df,
+    dim_engine_df,
+    dim_airport_df,
+    dim_routes_df,
+    dim_engine_component_df):
 
-dim_aircraft = transform_aircraft(dim_aircraft_df)
+    dim_aircraft = transform_aircraft(dim_aircraft_df)
 
-dim_engine = transform_engine(dim_engine_df)
+    dim_engine = transform_engine(dim_engine_df)
 
-dim_airport = transform_airport(dim_airport_df)
+    dim_airport = transform_airport(dim_airport_df)
 
-dim_route = transform_route(dim_routes_df)
+    dim_route = transform_route(dim_routes_df)
 
-dim_component = transform_component(dim_engine_component_df)
+    dim_component = transform_component(dim_engine_component_df)
+
+    return dim_aircraft, dim_engine, dim_airport, dim_route, dim_component
 
 if __name__ == "__main__":
 
-    print("Dimension Transformation Completed")
+    transform_all_dimension()
+
+    print("All Dimension Transformation Completed")

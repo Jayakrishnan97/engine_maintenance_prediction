@@ -33,6 +33,11 @@ airflow_venv/
 venv/
 .venv/
 
-# Airflow runtime
-airflow/
-logs/
+#ignore all airflow
+
+airflow/*
+
+#except dags and.py
+
+!airflow/dags/
+!airflow/dags/engine_maintenance_etl.py/
